@@ -1,0 +1,31 @@
+import React from 'react';
+import style from './css/index.less' ;
+import { connect } from 'dva';
+function Base(props: any) {
+    return (
+        <div className={style.layout}>
+                {{ spanHTML }}
+                {{ reactSvg }}
+            </div>
+            )
+};
+export default connect((model: any) => {
+    return {
+      deviceAlarmCode1: model['index'].deviceAlarmCode1,
+      deviceAlarmCode2: model['index'].deviceAlarmCode2,
+      deviceAlarmCode3: model['index'].deviceAlarmCode3,
+      deviceAlarmCode4: model['index'].deviceAlarmCode4,
+      deviceAlarmCode5: model['index'].deviceAlarmCode5,
+      UtilizationRate11:model['index'].UtilizationRate11,
+      UtilizationRate21:model['index'].UtilizationRate21,
+      UtilizationRate31:model['index'].UtilizationRate31,
+      UtilizationRate41:model['index'].UtilizationRate41,
+      UtilizationRate51:model['index'].UtilizationRate51,
+      'Robot_RC8_11!CT':model['index']['Robot_RC8_11!CT'],
+      'Robot_RC8_21!CT':model['index']['Robot_RC8_21!CT'],
+      'Robot_RC8_31!CT':model['index']['Robot_RC8_31!CT'],
+      'Robot_RC8_41!CT':model['index']['Robot_RC8_41!CT'],
+      'Robot_RC8_51!CT':model['index']['Robot_RC8_51!CT'],
+      thisShowDev:model['index'].thisShowDev
+    }
+  })(Base)
