@@ -142,3 +142,5 @@ export default function(){
     )
 };
 ```
+#### svg压缩优化，使用 svgo出了点问题，如有需要可查看
+https://www.npmjs.com/package/svgo
